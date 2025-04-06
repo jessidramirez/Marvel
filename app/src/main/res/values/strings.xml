@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Marvel</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="previous">Previous</string>
+
+    <string name="presentacion">
+        Tu puerta de entrada para explorar el mundo como nunca antes. Con nuestra app, podrás descubrir destinos increíbles, planificar tu próximo viaje de forma fácil y encontrar las mejores experiencias locales."
+    </string>
+</resources>

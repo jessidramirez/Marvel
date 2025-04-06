@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.marvel.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.marvel.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_PerfilFragment"
+            app:destination="@id/PerfilFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_FotosFragment"
+            app:destination="@id/FotosFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_VideosFragment"
+            app:destination="@id/VideosFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_WebFragment"
+            app:destination="@id/WebFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.marvel.LoginFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_LoginFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/PerfilFragment"
+        android:name="com.example.marvel.PerfilFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_perfil">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FotosFragment"
+        android:name="com.example.marvel.FotosFragment"
+        android:label="Fotos"
+        tools:layout="@layout/fragment_fotos">
+
+    </fragment>
+    <fragment
+        android:id="@+id/VideosFragment"
+        android:name="com.example.marvel.VideosFragment"
+        android:label="Videos"
+        tools:layout="@layout/fragment_web">
+
+    </fragment>
+    <fragment
+        android:id="@+id/WebFragment"
+        android:name="com.example.marvel.WebFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_web">
+
+    </fragment>
+</navigation>
