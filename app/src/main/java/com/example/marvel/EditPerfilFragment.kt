@@ -1,19 +1,22 @@
 package com.example.marvel
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.marvel.databinding.FragmentEditperfilBinding
 import com.example.marvel.databinding.FragmentPerfilBinding
+import java.util.Calendar
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class PerfilFragment : Fragment() {
+class EditPerfilFragment : Fragment() {
 
-    private var _binding: FragmentPerfilBinding? = null
+    private var _binding: FragmentEditperfilBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,18 +27,28 @@ class PerfilFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentPerfilBinding.inflate(inflater, container, false)
+        _binding = FragmentEditperfilBinding.inflate(inflater, container, false)
         return binding.root
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnCerrarSesion.setOnClickListener {
-            findNavController().navigate(R.id.action_PerfilFragment_to_FirstFragment)
+        binding.age.setOnClickListener {
+            val calendar = Calendar.getInstance()
+            val year = calendar.get(Calendar.YEAR)
+            val month = calendar.get(Calendar.MONTH)
+            val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+            DatePickerDialog(requireContext(), { _, y, m, d ->
+                binding.age.setText("$d/${m + 1}/$y")
+            }, year, month, day).show()
         }
-        binding.btnEditar.setOnClickListener {
-            findNavController().navigate(R.id.action_PerfilFragment_to_EditPerfilFragment)
+        binding.btnCancelar.setOnClickListener {
+            findNavController().navigate(R.id.action_EditPerfilFragment_to_PerfilFragment)
+        }
+        binding.btnGuardar.setOnClickListener {
+
         }
 
     }

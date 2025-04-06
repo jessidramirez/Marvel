@@ -48,7 +48,22 @@
         android:name="com.example.marvel.PerfilFragment"
         android:label="Perfil"
         tools:layout="@layout/fragment_perfil">
+        <action
+            android:id="@+id/action_PerfilFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_PerfilFragment_to_EditPerfilFragment"
+            app:destination="@id/EditPerfilFragment" />
+    </fragment>
 
+    <fragment
+        android:id="@+id/EditPerfilFragment"
+        android:name="com.example.marvel.EditPerfilFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_editperfil">
+        <action
+            android:id="@+id/action_EditPerfilFragment_to_PerfilFragment"
+            app:destination="@id/PerfilFragment" />
     </fragment>
 
     <fragment
