@@ -70,7 +70,7 @@
     <fragment
         android:id="@+id/WebFragment"
         android:name="com.example.marvel.WebFragment"
-        android:label="Perfil"
+        android:label="Web"
         tools:layout="@layout/fragment_web">
 
     </fragment>
