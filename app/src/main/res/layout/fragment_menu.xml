@@ -2,40 +2,57 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondo"
     android:padding="24dp">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="246dp"
+            android:adjustViewBounds="false"
+            android:background="@color/fondo"
+            android:baselineAligned="false"
+            android:longClickable="false"
+            android:nestedScrollingEnabled="false"
+            android:scaleType="centerInside"
+            android:src="@drawable/_97f3748_d3b8_4cdc_9753_20213872ea08" />
 
         <Button
             android:id="@+id/btnPerfil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Perfil"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/azul"
+            android:text="Perfil" />
 
         <Button
             android:id="@+id/btnFotos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fotos"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/azul"
+            android:text="Fotos" />
 
         <Button
             android:id="@+id/btnVideos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Videos"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/azul"
+            android:text="Videos" />
 
         <Button
             android:id="@+id/btnWeb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Web"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/azul"
+            android:text="Web" />
 
 
     </LinearLayout>

@@ -4,12 +4,24 @@
     android:layout_height="match_parent"
     android:padding="24dp"
     xmlns:tools="http://schemas.android.com/"
-    tools:context=".LoginFragment">
+    tools:context=".LoginFragment"
+    android:background="@color/fondo">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="246dp"
+            android:adjustViewBounds="false"
+            android:background="@color/fondo"
+            android:baselineAligned="false"
+            android:longClickable="false"
+            android:nestedScrollingEnabled="false"
+            android:scaleType="centerInside"
+            android:src="@drawable/_97f3748_d3b8_4cdc_9753_20213872ea08" />
 
         <EditText
             android:id="@+id/etUsername"
@@ -32,28 +44,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Iniciar Sesión"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/azul"/>
 
         <Button
             android:id="@+id/btnFacebook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Facebook"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/azul"/>
 
         <Button
             android:id="@+id/btnTwitter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Twitter"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/azul"/>
 
         <Button
             android:id="@+id/btnGoogle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Google"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/azul"/>
 
 
     </LinearLayout>
