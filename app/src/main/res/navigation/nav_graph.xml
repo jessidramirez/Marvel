@@ -8,6 +8,7 @@
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.example.marvel.FirstFragment"
+        android:label=""
         tools:layout="@layout/fragment_first">
 
         <action
@@ -17,6 +18,7 @@
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.marvel.SecondFragment"
+        android:label=""
         tools:layout="@layout/fragment_second">
 
         <action
@@ -35,7 +37,7 @@
     <fragment
         android:id="@+id/LoginFragment"
         android:name="com.example.marvel.LoginFragment"
-        android:label="Perfil"
+        android:label="Login"
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_LoginFragment_to_SecondFragment"
@@ -59,7 +61,7 @@
     <fragment
         android:id="@+id/EditPerfilFragment"
         android:name="com.example.marvel.EditPerfilFragment"
-        android:label="Perfil"
+        android:label="Editar Perfil"
         tools:layout="@layout/fragment_editperfil">
         <action
             android:id="@+id/action_EditPerfilFragment_to_PerfilFragment"
