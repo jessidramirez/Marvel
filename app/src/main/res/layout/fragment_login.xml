@@ -44,11 +44,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Iniciar Sesión"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:backgroundTint="@color/azul"/>
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O inicia sesión con:"
+            android:layout_gravity="center"
+            />
         <Button
             android:id="@+id/btnFacebook"
+            android:drawableLeft="@drawable/icons_facebook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Facebook"
@@ -57,6 +63,7 @@
 
         <Button
             android:id="@+id/btnTwitter"
+            android:drawableLeft="@drawable/icons_x"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Twitter"
@@ -65,10 +72,11 @@
 
         <Button
             android:id="@+id/btnGoogle"
+            android:drawableLeft="@drawable/icon_google"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Google"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:backgroundTint="@color/azul"/>
 
 
