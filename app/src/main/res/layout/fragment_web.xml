@@ -42,6 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:backgroundTint="@color/fondo"
+        android:keepScreenOn="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:layout_constraintVertical_bias="1.0"
@@ -52,7 +53,8 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/_97f3748_d3b8_4cdc_9753_20213872ea08"
-        tools:layout_editor_absoluteX="155dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,19 +1,13 @@
 package com.example.marvel
 
-import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebView
-import androidx.core.view.get
+import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import com.example.marvel.databinding.FragmentWebBinding
 
-
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
 class WebFragment : Fragment() {
 
     private var _binding: FragmentWebBinding? = null
@@ -35,10 +29,15 @@ class WebFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
             var url="http://www.poli.edu.co/";
+
         binding.button.setOnClickListener(){
-            url = binding.searchView.query.toString();
+            url = binding.searchView.query.toString().trim();
             val vista=binding.webView;
             vista.getSettings().setJavaScriptEnabled(true);
+            vista.webViewClient = WebViewClient()
+            if (!url.startsWith("http://") && !url.startsWith("https://")) {
+                url = "https://$url"
+            }
             vista.loadUrl(url);
         }
     }

@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Marvel</string>
-    <string name="action_settings">Settings</string>
+    <string name="acerca">Acerca de Travelword</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="register">Registrarse</string>
+    <string name="cerrar">Cerrar Sesión</string>
     <!-- Strings used for fragments for navigation -->
     <string name="comenzar">Comenzar</string>
     <string name="Titulo1">Bienvenido</string>

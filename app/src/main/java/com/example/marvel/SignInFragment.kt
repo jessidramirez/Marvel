@@ -8,12 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.marvel.databinding.FragmentEditperfilBinding
-import com.example.marvel.databinding.FragmentPerfilBinding
+import com.example.marvel.databinding.FragmentSigninBinding
 import java.util.Calendar
 
-class EditPerfilFragment : Fragment() {
+class SignInFragment : Fragment() {
 
-    private var _binding: FragmentEditperfilBinding? = null
+    private var _binding: FragmentSigninBinding? = null
 
     private val binding get() = _binding!!
 
@@ -21,7 +21,7 @@ class EditPerfilFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentEditperfilBinding.inflate(inflater, container, false)
+        _binding = FragmentSigninBinding.inflate(inflater, container, false)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -45,8 +45,12 @@ class EditPerfilFragment : Fragment() {
             var apellido = binding.lastname.text.toString()
             var correo = binding.mail.text.toString()
             var fecha = binding.age.text.toString()
+            var password = binding.editTextTextPassword.text.toString()
+            var foto = binding.imgPerfil.toString()
+            //Crear usuario
+            val usuario = Usuario.crearUsuario(nombre, apellido, correo, fecha, password, foto)
 
-            println("Nombre: $nombre, Apellido: $apellido, Correo: $correo, Fecha: $fecha")
+            println(usuario)
 
             //Falta guardar los datos en la base de datos
         }

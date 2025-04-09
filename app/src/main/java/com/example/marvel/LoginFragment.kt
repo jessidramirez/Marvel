@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.marvel.databinding.FragmentLoginBinding
 import com.example.marvel.databinding.FragmentSecondBinding
+import com.google.android.material.snackbar.Snackbar
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -32,18 +33,27 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val mySnackbar = Snackbar.make(view, "Error al iniciar sesión", Snackbar.LENGTH_SHORT)
 
         binding.btnLogin.setOnClickListener {
-            findNavController().navigate(R.id.action_LoginFragment_to_SecondFragment)
+            val email = binding.etUsername.text.toString()
+            val password = binding.etPassword.text.toString()
+            println("Email: $email, Password: $password")
+            if (email == "admin" && password == "admin") {
+                findNavController().navigate(R.id.action_LoginFragment_to_SecondFragment)
+            }else{mySnackbar.show()}
         }
         binding.btnGoogle.setOnClickListener {
-            findNavController().navigate(R.id.action_LoginFragment_to_SecondFragment)
+            mySnackbar.show()
+        }
+        binding.btnGoogle.setOnClickListener {
+            mySnackbar.show()
         }
         binding.btnFacebook.setOnClickListener {
-            findNavController().navigate(R.id.action_LoginFragment_to_SecondFragment)
+            mySnackbar.show()
         }
         binding.btnTwitter.setOnClickListener {
-            findNavController().navigate(R.id.action_LoginFragment_to_SecondFragment)
+            mySnackbar.show()
         }
     }
 
