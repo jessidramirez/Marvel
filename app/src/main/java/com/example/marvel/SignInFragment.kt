@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.marvel.databinding.FragmentEditperfilBinding
 import com.example.marvel.databinding.FragmentSigninBinding
 import java.util.Calendar
 
@@ -26,12 +25,12 @@ class SignInFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.age.setOnFocusChangeListener() { _, hasFocus ->
+        binding.age.setOnFocusChangeListener{ _, hasFocus ->
             if (hasFocus) {
                 fecha()
             }
         }
-        binding.imgPerfil.setOnClickListener() {
+        binding.imgPerfil.setOnClickListener{
             // Seleccionar foto de la galería
 
             // Actualizar la imagen de perfil
@@ -41,12 +40,12 @@ class SignInFragment : Fragment() {
             findNavController().navigate(R.id.action_EditPerfilFragment_to_PerfilFragment)
         }
         binding.btnGuardar.setOnClickListener {
-            var nombre = binding.name.text.toString()
-            var apellido = binding.lastname.text.toString()
-            var correo = binding.mail.text.toString()
-            var fecha = binding.age.text.toString()
-            var password = binding.editTextTextPassword.text.toString()
-            var foto = binding.imgPerfil.toString()
+            val nombre = binding.name.text.toString()
+            val apellido = binding.lastname.text.toString()
+            val correo = binding.mail.text.toString()
+            val fecha = binding.age.text.toString()
+            val password = binding.editTextTextPassword.text.toString()
+            val foto = binding.imgPerfil.toString()
             //Crear usuario
             val usuario = Usuario.crearUsuario(nombre, apellido, correo, fecha, password, foto)
 
@@ -56,7 +55,7 @@ class SignInFragment : Fragment() {
         }
 
     }
-    fun fecha(): Unit {
+    private fun fecha(){
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
         val month = calendar.get(Calendar.MONTH)
