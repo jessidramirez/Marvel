@@ -8,15 +8,10 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.marvel.databinding.FragmentPerfilBinding
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
 class PerfilFragment : Fragment() {
 
     private var _binding: FragmentPerfilBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -26,7 +21,6 @@ class PerfilFragment : Fragment() {
 
         _binding = FragmentPerfilBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -37,7 +31,6 @@ class PerfilFragment : Fragment() {
         binding.btnEditar.setOnClickListener {
             findNavController().navigate(R.id.action_PerfilFragment_to_EditPerfilFragment)
         }
-
     }
 
     override fun onDestroyView() {

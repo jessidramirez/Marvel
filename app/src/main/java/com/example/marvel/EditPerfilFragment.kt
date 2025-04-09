@@ -11,27 +11,19 @@ import com.example.marvel.databinding.FragmentEditperfilBinding
 import com.example.marvel.databinding.FragmentPerfilBinding
 import java.util.Calendar
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
 class EditPerfilFragment : Fragment() {
 
     private var _binding: FragmentEditperfilBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         _binding = FragmentEditperfilBinding.inflate(inflater, container, false)
         return binding.root
-
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.age.setOnClickListener {
