@@ -42,9 +42,21 @@
         <action
             android:id="@+id/action_LoginFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_LoginFragment_to_SigninFragment"
+            app:destination="@id/SigninFragment" />
 
     </fragment>
+    <fragment
+        android:id="@+id/SigninFragment"
+        android:name="com.example.marvel.SignInFragment"
+        android:label="Registrarse"
+        tools:layout="@layout/fragment_signin">
+        <action
+            android:id="@+id/action_SigninFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
 
+    </fragment>
     <fragment
         android:id="@+id/PerfilFragment"
         android:name="com.example.marvel.PerfilFragment"

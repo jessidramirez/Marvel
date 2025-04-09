@@ -43,6 +43,9 @@ class LoginFragment : Fragment() {
                 findNavController().navigate(R.id.action_LoginFragment_to_SecondFragment)
             }else{mySnackbar.show()}
         }
+        binding.btnSignin.setOnClickListener {
+            findNavController().navigate(R.id.action_LoginFragment_to_SigninFragment)
+        }
         binding.btnGoogle.setOnClickListener {
             mySnackbar.show()
         }

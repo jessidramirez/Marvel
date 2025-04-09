@@ -37,7 +37,7 @@ class SignInFragment : Fragment() {
 
         }
         binding.btnCancelar.setOnClickListener {
-            findNavController().navigate(R.id.action_EditPerfilFragment_to_PerfilFragment)
+            findNavController().navigate(R.id.action_SigninFragment_to_FirstFragment)
         }
         binding.btnGuardar.setOnClickListener {
             val nombre = binding.name.text.toString()
