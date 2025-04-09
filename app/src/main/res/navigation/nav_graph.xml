@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.marvel.FirstFragment"
+        android:name="com.example.marvel.HomeFragment"
         android:label=""
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_home">
 
         <action
             android:id="@+id/action_FirstFragment_to_LoginFragment"
             app:destination="@id/LoginFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.marvel.SecondFragment"
+        android:id="@+id/MenuFragment"
+        android:name="com.example.marvel.MenuFragment"
         android:label=""
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_menu">
 
         <action
             android:id="@+id/action_SecondFragment_to_PerfilFragment"
@@ -41,7 +41,7 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_LoginFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/MenuFragment" />
         <action
             android:id="@+id/action_LoginFragment_to_SigninFragment"
             app:destination="@id/SigninFragment" />

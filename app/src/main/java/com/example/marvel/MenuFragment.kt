@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.marvel.databinding.FragmentMenuBinding
 
-class SecondFragment : Fragment() {
+class MenuFragment : Fragment() {
 
     private var _binding: FragmentMenuBinding? = null
 

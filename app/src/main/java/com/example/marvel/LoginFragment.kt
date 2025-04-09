@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.marvel.databinding.FragmentLoginBinding
-import com.example.marvel.databinding.FragmentSecondBinding
 import com.google.android.material.snackbar.Snackbar
 
 /**
