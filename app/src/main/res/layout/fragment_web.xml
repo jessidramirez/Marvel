@@ -52,7 +52,7 @@
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/_97f3748_d3b8_4cdc_9753_20213872ea08"
+        android:src="@drawable/logotipo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="0dp" />

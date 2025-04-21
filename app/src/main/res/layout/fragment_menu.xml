@@ -20,7 +20,7 @@
             android:longClickable="false"
             android:nestedScrollingEnabled="false"
             android:scaleType="centerInside"
-            android:src="@drawable/_97f3748_d3b8_4cdc_9753_20213872ea08" />
+            android:src="@drawable/logotipo" />
 
         <Button
             android:id="@+id/btnPerfil"

@@ -16,7 +16,7 @@
         android:layout_margin="10dp"
         android:layout_marginBottom="24dp"
         android:contentDescription="Foto de perfil"
-        android:src="@drawable/perfil" />
+        android:src="@drawable/subirimg" />
 
     <EditText
         android:id="@+id/name"

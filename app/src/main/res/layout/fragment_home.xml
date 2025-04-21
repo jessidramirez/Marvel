@@ -36,7 +36,7 @@
             android:longClickable="false"
             android:nestedScrollingEnabled="false"
             android:scaleType="centerInside"
-            android:src="@drawable/_97f3748_d3b8_4cdc_9753_20213872ea08"
+            android:src="@drawable/logotipo"
             app:layout_constraintBottom_toTopOf="@+id/textview_first"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

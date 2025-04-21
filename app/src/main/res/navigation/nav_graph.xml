@@ -37,7 +37,7 @@
     <fragment
         android:id="@+id/LoginFragment"
         android:name="com.example.marvel.LoginFragment"
-        android:label="Login"
+        android:label=""
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_LoginFragment_to_SecondFragment"
@@ -50,17 +50,17 @@
     <fragment
         android:id="@+id/SigninFragment"
         android:name="com.example.marvel.SignInFragment"
-        android:label="Registrarse"
+        android:label=""
         tools:layout="@layout/fragment_signin">
         <action
-            android:id="@+id/action_SigninFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_SigninFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
 
     </fragment>
     <fragment
         android:id="@+id/PerfilFragment"
         android:name="com.example.marvel.PerfilFragment"
-        android:label="Perfil"
+        android:label=""
         tools:layout="@layout/fragment_perfil">
         <action
             android:id="@+id/action_PerfilFragment_to_FirstFragment"
@@ -73,7 +73,7 @@
     <fragment
         android:id="@+id/EditPerfilFragment"
         android:name="com.example.marvel.EditPerfilFragment"
-        android:label="Editar Perfil"
+        android:label=""
         tools:layout="@layout/fragment_editperfil">
         <action
             android:id="@+id/action_EditPerfilFragment_to_PerfilFragment"
@@ -83,21 +83,21 @@
     <fragment
         android:id="@+id/FotosFragment"
         android:name="com.example.marvel.FotosFragment"
-        android:label="Fotos"
+        android:label=""
         tools:layout="@layout/fragment_fotos">
 
     </fragment>
     <fragment
         android:id="@+id/VideosFragment"
         android:name="com.example.marvel.VideosFragment"
-        android:label="Videos"
+        android:label=""
         tools:layout="@layout/fragment_web">
 
     </fragment>
     <fragment
         android:id="@+id/WebFragment"
         android:name="com.example.marvel.WebFragment"
-        android:label="Web"
+        android:label=""
         tools:layout="@layout/fragment_web">
 
     </fragment>
