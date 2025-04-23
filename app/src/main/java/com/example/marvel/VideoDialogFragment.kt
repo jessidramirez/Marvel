@@ -2,40 +2,56 @@ package com.example.marvel
 
 import android.net.Uri
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.MediaController
+import android.widget.VideoView
 import androidx.fragment.app.DialogFragment
-import com.bumptech.glide.Glide
 import com.example.marvel.databinding.DialogImageBinding
-class ImageDialogFragment : DialogFragment() {
+
+class VideoDialogFragment : DialogFragment() {
+
     private var _binding: DialogImageBinding? = null
     private val binding get() = _binding!!
-    private var imageUri: Uri? = null
+    private var videoUri: Uri? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Para que el fondo sea transparente
         setStyle(STYLE_NORMAL, android.R.style.Theme_Black_NoTitleBar_Fullscreen)
     }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = DialogImageBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        imageUri?.let {
-            Glide.with(requireContext())
-                .load(it)
-                .into(binding.fullscreenImage)
+
+        videoUri?.let { uri ->
+            val mediaController = MediaController(requireContext())
+            mediaController.setAnchorView(binding.fullscreenVideo)
+
+            binding.fullscreenVideo.setMediaController(mediaController)
+            binding.fullscreenVideo.setVideoURI(uri)
+            binding.fullscreenVideo.start()
         }
-        // Cerrar el popup al tocar la imagen
-        binding.fullscreenImage.setOnClickListener {
+
+        // Cerrar el popup al tocar el video
+        binding.fullscreenVideo.setOnClickListener {
             dismiss()
         }
     }
-    fun setImageUri(uri: Uri) {
-        imageUri = uri
+
+    fun setVideoUri(uri: Uri) {
+        videoUri = uri
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
+        binding.fullscreenVideo.stopPlayback()
         _binding = null
     }
 }

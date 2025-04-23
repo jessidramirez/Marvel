@@ -38,6 +38,11 @@ class LoginFragment : Fragment() {
             val email = binding.etUsername.text.toString()
             val password = binding.etPassword.text.toString()
             println("Email: $email, Password: $password")
+
+            //VALIDAR CREDENCIALES
+
+            //
+
             if (email == "admin" && password == "admin") {
                 findNavController().navigate(R.id.action_LoginFragment_to_SecondFragment)
             }else{mySnackbar.show()}

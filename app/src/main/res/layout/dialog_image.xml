@@ -12,4 +12,10 @@
         android:layout_height="match_parent"
         android:scaleType="fitCenter"
         android:contentDescription="Imagen" />
+    <VideoView
+        android:id="@+id/fullscreenVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:contentDescription="Imagen" />
 </FrameLayout>

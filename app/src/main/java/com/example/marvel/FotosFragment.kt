@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.bumptech.glide.Glide
 import com.example.marvel.databinding.FragmentFotosBinding
 
-
 class FotosFragment : Fragment() {
 
     private var _binding: FragmentFotosBinding? = null
