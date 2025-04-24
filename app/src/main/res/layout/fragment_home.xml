@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fondo"
+    android:theme="@style/Theme.Marvel"
     tools:context=".HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,13 +22,13 @@
             android:text="@string/Titulo1"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="#000000"
-            app:layout_constraintBottom_toTopOf="@+id/imageView3"
+            app:layout_constraintBottom_toTopOf="@+id/logologin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/logologin"
             android:layout_width="wrap_content"
             android:layout_height="246dp"
             android:adjustViewBounds="false"
@@ -37,6 +38,7 @@
             android:nestedScrollingEnabled="false"
             android:scaleType="centerInside"
             android:src="@drawable/logotipo"
+            android:theme="@style/TextAppearance.AppCompat.Large.Inverse"
             app:layout_constraintBottom_toTopOf="@+id/textview_first"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
