@@ -19,7 +19,6 @@ import com.google.firebase.database.FirebaseDatabase
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileNotFoundException
-import java.lang.ref.Reference
 import java.util.Base64
 import java.util.Calendar
 import com.google.firebase.auth.FirebaseAuth as FirebaseAuth1

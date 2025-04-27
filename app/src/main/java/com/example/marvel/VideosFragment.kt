@@ -13,7 +13,6 @@ import android.widget.MediaController
 import android.widget.VideoView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
-import com.bumptech.glide.Glide
 import com.example.marvel.databinding.FragmentVideosBinding
 
 class VideosFragment : Fragment() {

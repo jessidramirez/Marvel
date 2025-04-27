@@ -10,6 +10,7 @@
         android:id="@+id/popupImageView"
         android:layout_width="300dp"
         android:layout_height="400dp"
+        android:contentDescription="@string/imagen"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

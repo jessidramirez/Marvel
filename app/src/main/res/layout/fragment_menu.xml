@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <ImageView
@@ -17,6 +17,7 @@
             android:adjustViewBounds="false"
             android:background="@color/fondo"
             android:baselineAligned="false"
+            android:contentDescription="@string/Titulo1"
             android:longClickable="false"
             android:nestedScrollingEnabled="false"
             android:scaleType="centerInside"
@@ -28,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/azul"
-            android:text="Perfil" />
+            android:text="@string/perfil" />
 
         <Button
             android:id="@+id/btnFotos"
@@ -36,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:backgroundTint="@color/azul"
-            android:text="Fotos" />
+            android:text="@string/fotos" />
 
         <Button
             android:id="@+id/btnVideos"
@@ -44,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:backgroundTint="@color/azul"
-            android:text="Videos" />
+            android:text="@string/videos" />
 
         <Button
             android:id="@+id/btnWeb"
@@ -52,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/azul"
-            android:text="Web" />
+            android:text="@string/web" />
 
 
     </LinearLayout>

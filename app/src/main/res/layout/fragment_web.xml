@@ -32,7 +32,7 @@
         android:layout_marginTop="16dp"
         android:layout_weight="1"
         android:backgroundTint="@color/azul"
-        android:text="Buscar"
+        android:text="@string/buscar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchView" />
@@ -55,6 +55,7 @@
         android:src="@drawable/logotipo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/fotos"
         tools:layout_editor_absoluteY="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

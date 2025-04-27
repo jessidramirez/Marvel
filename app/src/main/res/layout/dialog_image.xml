@@ -11,11 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitCenter"
-        android:contentDescription="Imagen" />
+        android:contentDescription="@string/imagen" />
     <VideoView
         android:id="@+id/fullscreenVideo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitCenter"
-        android:contentDescription="Imagen" />
+        android:contentDescription="@string/imagen" />
 </FrameLayout>

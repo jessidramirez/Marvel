@@ -27,7 +27,7 @@
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Usuario"
+            android:hint="@string/usuario"
             android:inputType="textPersonName"
             android:layout_marginBottom="16dp" />
 
@@ -35,7 +35,7 @@
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Contraseña"
+            android:hint="@string/contrase_a"
             android:inputType="textPassword"
             android:layout_marginBottom="24dp" />
 
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:backgroundTint="@color/azul"
-            android:text="Iniciar Sesión" />
+            android:text="@string/iniciar_sesion" />
 
         <Button
             android:id="@+id/btnSignin"
@@ -53,12 +53,12 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:backgroundTint="@color/azul"
-            android:text="Registrarse" />
+            android:text="@string/registrarse" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="O inicia sesión con:"
+            android:text="@string/iniciacon"
             android:layout_gravity="center"
             />
 
@@ -69,14 +69,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:backgroundTint="@color/azul"
-            android:text="Facebook" />
+            android:text="@string/facebook" />
 
         <Button
             android:id="@+id/btnTwitter"
             android:drawableLeft="@drawable/icons_x"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Twitter"
+            android:text="@string/twitter"
             android:layout_marginBottom="8dp"
             android:backgroundTint="@color/azul"/>
 
@@ -85,7 +85,7 @@
             android:drawableLeft="@drawable/icon_google"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Google"
+            android:text="@string/google"
             android:layout_marginBottom="8dp"
             android:backgroundTint="@color/azul"/>
 
