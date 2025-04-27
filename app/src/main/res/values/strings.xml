@@ -1,28 +1,23 @@
 <resources>
-    <string name="app_name">Marvel</string>
+    <string name="app_name">Travelword</string>
     <string name="acerca">Acerca de Travelword</string>
-    <string name="login">Iniciar Sesión</string>
-    <string name="register">Registrarse</string>
-    <string name="cerrar">Cerrar Sesión</string>
+    <string name="presentacion">
+        Tu puerta de entrada para explorar el mundo como nunca antes. Con nuestra app, podrás descubrir destinos increíbles, planificar tu próximo viaje de forma fácil y encontrar las mejores experiencias locales."
+    </string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="comenzar">Comenzar</string>
     <string name="Titulo1">Bienvenido</string>
     <string name="previous">Previous</string>
 
-    <string name="presentacion">
-        Tu puerta de entrada para explorar el mundo como nunca antes. Con nuestra app, podrás descubrir destinos increíbles, planificar tu próximo viaje de forma fácil y encontrar las mejores experiencias locales."
-    </string>
-
     //botones
+    <string name="login">Iniciar Sesión</string>
+    <string name="register">Registrarse</string>
+    <string name="cerrar">Cerrar Sesión</string>
     <string name="modificar_datos">Modificar datos</string>
     <string name="guardar">Guardar</string>
     <string name="cancelar">Cancelar</string>
     <string name="buscar">Buscar</string>
-
-    <string name="foto_de_perfil">Foto de perfil</string>
-    <string name="imagen">Imagen</string>
-    <string name="usuario">Usuario</string>
-    <string name="contrase_a">Contraseña</string>
 
     //Inicio de sesion
     <string name="iniciar_sesion">Iniciar Sesión</string>
@@ -37,8 +32,15 @@
     <string name="fotos">Fotos</string>
     <string name="videos">Videos</string>
     <string name="web">Web</string>
+
+    //Datos
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
     <string name="correo">Correo</string>
     <string name="fecha_de_nacimiento">Fecha de nacimiento</string>
+    <string name="foto_de_perfil">Foto de perfil</string>
+    <string name="imagen">Imagen</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrase_a">Contraseña</string>
+
 </resources>
