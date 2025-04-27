@@ -9,4 +9,9 @@
         android:orderInCategory="100"
         android:title="@string/acerca"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_cerrarsesion"
+        android:orderInCategory="100"
+        android:title="@string/cerrar"
+        app:showAsAction="never" />
 </menu>

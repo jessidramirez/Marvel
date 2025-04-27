@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "747606799333",
+    "project_id": "viajesapp-9d39c",
+    "storage_bucket": "viajesapp-9d39c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747606799333:android:e0f700b3f71bb1a3a7f50c",
+        "android_client_info": {
+          "package_name": "com.example.marvel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp3-nhTT9nQcEEDQ5mGujU9z-BhqvRGGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

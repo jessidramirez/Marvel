@@ -9,15 +9,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.navigation.fragment.findNavController
 import com.example.marvel.databinding.FragmentEditperfilBinding
 import com.example.marvel.databinding.FragmentPerfilBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import java.util.Base64
 import java.util.Calendar
 
 class EditPerfilFragment : Fragment() {
 
     private var _binding: FragmentEditperfilBinding? = null
+    private lateinit var auth: FirebaseAuth
+    private lateinit var database: DatabaseReference
 
     private val binding get() = _binding!!
 
@@ -25,6 +35,7 @@ class EditPerfilFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        auth= FirebaseAuth.getInstance()
         _binding = FragmentEditperfilBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -42,6 +53,41 @@ class EditPerfilFragment : Fragment() {
             )
             changeImage.launch(pickImg)
         }
+        val database = FirebaseDatabase.getInstance()
+        val referenciaUsuarios = database.getReference("Usuarios") // Cambia "Usuarios" por el nodo correspondiente
+        println("/Usuarios/"+ FirebaseAuth.getInstance().currentUser?.uid.toString())
+        referenciaUsuarios.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (usuarioSnapshot in snapshot.children) {
+                        if (usuarioSnapshot.key == FirebaseAuth.getInstance().currentUser?.uid.toString()) {
+                            val nombre = usuarioSnapshot.child("nombre").getValue(String::class.java)
+                            val apellido = usuarioSnapshot.child("apellido").getValue(String::class.java)
+                            val correo = usuarioSnapshot.child("correo").getValue(String::class.java)
+                            val fecha = usuarioSnapshot.child("fecha").getValue(String::class.java)
+                            val foto = usuarioSnapshot.child("foto").getValue(String::class.java)
+                            binding.name.setText(nombre)
+                            binding.lastname.setText(apellido)
+                            binding.mail.setText(correo)
+                            binding.age.setText(fecha)
+                            if (foto.equals("defaultImage")) {
+                                binding.imgPerfil.setImageResource(com.example.marvel.R.drawable.perfil)
+                            } else {
+                                binding.imgPerfil.setImageResource(com.example.marvel.R.drawable.perfil)
+                            }
+
+
+                        }
+                    }
+                } else {
+                    println("No se encontraron datos")
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                println("Error al leer los datos: ${error.message}")
+            }
+        })
 
         binding.btnCancelar.setOnClickListener {
             findNavController().navigate(R.id.action_EditPerfilFragment_to_PerfilFragment)
@@ -52,12 +98,14 @@ class EditPerfilFragment : Fragment() {
             var correo = binding.mail.text.toString()
             var fecha = binding.age.text.toString()
 
-            println("Nombre: $nombre, Apellido: $apellido, Correo: $correo, Fecha: $fecha")
+            actualizarUsuario(nombre, apellido, correo, fecha, "defaultImage")
 
-            //Falta guardar los datos en la base de datos
+            Toast.makeText(requireContext(), "Perfil actualizado", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_EditPerfilFragment_to_PerfilFragment)
         }
 
     }
+
     fun fecha(): Unit {
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
@@ -78,5 +126,16 @@ class EditPerfilFragment : Fragment() {
             val imgUri = data?.data
             binding.imgPerfil.setImageURI(imgUri)
         }
+    }
+    private fun actualizarUsuario(nombre: String, apellido: String, correo: String, fecha: String, foto: String){
+        database = FirebaseDatabase.getInstance().getReference("Usuarios").child(FirebaseAuth.getInstance().currentUser?.uid.toString())
+        val user = hashMapOf<String,Any>(
+            "nombre" to nombre,
+            "apellido" to apellido,
+            "correo" to correo,
+            "fecha" to fecha,
+            "foto" to foto
+        )
+        database.updateChildren(user)
     }
 }

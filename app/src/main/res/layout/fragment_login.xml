@@ -61,14 +61,15 @@
             android:text="O inicia sesión con:"
             android:layout_gravity="center"
             />
+
         <Button
             android:id="@+id/btnFacebook"
-            android:drawableLeft="@drawable/icons_facebook"
+            android:drawableLeft="@drawable/icons8_facebook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Facebook"
             android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/azul"/>
+            android:backgroundTint="@color/azul"
+            android:text="Facebook" />
 
         <Button
             android:id="@+id/btnTwitter"
